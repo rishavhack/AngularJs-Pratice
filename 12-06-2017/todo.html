@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<title>Directive </title>
+
+	<script src="angular.min.js"></script>
+	<script src = "todo.js"></script>
+	<link rel="stylesheet"  href="bootstrap\css\bootstrap.min.css">
+</head>
+<body class="container">
+<div ng-controller= "todoCtrl as todo">
+
+<div class="jumbotron">
+    <h1>Todo List</h1>
+</div>
+	<div class="row">
+		<div class="col-xs-8">
+			<input type="text"  class="form-control" ng-keyup="todo.search()" ng-model="todo.task" placeholder="Enter Something...." autofocus>
+		</div>
+		<div class="col-xs-4">
+			<button class="btn btn-success btn-block" ng-if= "!todo.editMode" type="submit" ng-click="todo.addTasks()">Add Tasks</button>
+			<button class="btn btn-danger btn-block"  ng-if= "todo.editMode" type="submit" ng-click="todo.updateTasks()">Update Tasks</button>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-12">
+				<ul  class="list-group">
+					<li class="list-group-item" ng-repeat = "task in todo.tasks track by $index" ng-class="{'list-group-item-success':task.status'}">
+					<button style="float: left;" class="glyphicon glyphicon-unchecked" ng-click="todo.status()"></button>{{task}}
+					<button style="float: right;" class="glyphicon glyphicon-pencil" ng-click="todo.editTodo($index)"></button>
+					<button style="float: right;" class="glyphicon glyphicon-remove" ng-click="todo.deleteTodo($index)"></button>
+					<button style="float: right;" class="glyphicon glyphicon-arrow-down" ng-click="todo.downTodo($index)" ng-if=" $index != todo.tasks.length - 1 "></button>
+					<button style="float: right;" class="glyphicon glyphicon-arrow-up" ng-click="todo.upTodo($index)" ng-if="$index"></button>
+					</li>
+				</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
