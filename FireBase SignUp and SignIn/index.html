@@ -1,0 +1,72 @@
+<html ng-app="chat">
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBUrmo0MY6KUrme6j_a9ORJ2Clqx5ecuxI",
+        authDomain: "fir-1d3fe.firebaseapp.com",
+        databaseURL: "https://fir-1d3fe.firebaseio.com",
+        projectId: "fir-1d3fe",
+        storageBucket: "fir-1d3fe.appspot.com",
+        messagingSenderId: "1051826245817"
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+    <script src="angularfire.min.js"></script>
+ 
+
+    </head>
+    <body  ng-controller="chatCtrl as my">
+    <div class="container">
+        <div class="jumbotron col-md-6 col-md-offset-3">
+            <h2>WebApp SignUp Page</h2> 
+        </div>
+        <form role="form" name="regForm" novalidate="">
+        <div class="form-group col-md-6 col-md-offset-3" ng-class="{'has-error': regForm.email.$invalid && regForm.email.$touched}">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required="" ng-model="my.user.email">
+            <small class="help-block" ng-show="regForm.email.$invalid && regForm.email.$touched">Please enter an Email address</small>  
+        </div>
+        <div class="form-group col-md-6 col-md-offset-3" ng-class="{'has-error': regForm.password.$invalid && regForm.password.$touched}">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password" required="" ng-model="my.user.password">
+            <small class="help-block" ng-show="regForm.password.$invalid && regForm.password.$touched">Please enter an  Password</small>
+        </div>
+       
+        <div class="col-md-6 col-md-offset-3">
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="regForm.$invalid" ng-click="my.signUp()">SignUp</button>
+        </div>
+            
+        </form>
+        <br>
+        <br>
+          <div class="jumbotron col-md-6 col-md-offset-3">
+            <h2>WebApp SignIn Page</h2> 
+        </div>
+        <form role="form" name="loginForm" novalidate="">
+        <div class="form-group col-md-6 col-md-offset-3" ng-class="{'has-error': loginForm.email.$invalid && loginForm.email.$touched}">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required="" ng-model="my.user.email1">
+            <small class="help-block" ng-show="loginForm.email.$invalid && loginForm.email.$touched">Please enter an Email address</small>  
+        </div>
+        <div class="form-group col-md-6 col-md-offset-3" ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$touched}">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password" required="" ng-model="my.user.password1">
+            <small class="help-block" ng-show="loginForm.password.$invalid && loginForm.password.$touched">Please enter an  Password</small>
+        </div>
+       
+        <div class="col-md-6 col-md-offset-3">
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="loginForm.$invalid" ng-click="my.signIn()">SignIn</button>
+        </div>
+            
+        </form>
+    </div>
+   
+
+    </body>
+</html>
