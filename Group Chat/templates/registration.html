@@ -1,0 +1,15 @@
+<div>
+	Email:<input type ="email" class ="form-control" ng-model="my.useremail">
+	Password:<input type ="password" class="form-control" ng-model="my.password">
+	Confirm Password:<input type ="password" class="form-control" ng-model="my.userpssword">
+	<button type="button" class="btn btn-success" ng-click="my.signup()">SignUp </button>
+</div>
+<div>
+    <input type="email"  class="form-control" ng-model="my.email" placeholder="Email">
+    <input type="password"  class="form-control" ng-model="my.password1" placeholder="Password">
+    <button type="button" class="btn btn-info" ng-click="my.signin()">Signin </button>
+</div>
+
+<button type="button" class="btn btn-danger btn-block" ng-click="my.googlesignin()">Google Signin </button>
+
+   <img ng-src="{{my.googleResult.photoURL}}"  style="width:304px;height:228px;">
