@@ -1,0 +1,50 @@
+<div ng-controller="homtCtrl">	
+	<div class="row">
+		<div class="col-md-3">
+			<ul>
+				<h4>_.each</h4>
+				<li ng-repeat="lst in underScoreArray">{{lst.id}}.{{lst.name}}</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<h4>_.map</h4>
+				<li ng-repeat="lst in mapArray">{{lst}}</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<h4>_.filter</h4>
+				<li ng-repeat="lst in evenArray">{{lst.id}}.{{lst.name}}</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<h4>_.object</h4>
+				<li ng-repeat="(key, value) in underScoreobject">{{key}}->{{value}}</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-3">
+			<ul>
+				<h4>objectKey</h4>
+				<li ng-repeat="lst in underScoreobjectKeys">{{lst}}</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<h4>objectValue</h4>
+				<li ng-repeat="lst in underScoreobjectValues">{{lst}}</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<h4>Max Value</h4>
+				<li ng-repeat="(key,value) in maxValue">{{key}}->{{value}}</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -37,7 +37,6 @@ function homeCtrl(lists,data){
             home.lists.push(l);
             data[l] =[];
             
-
     }
 }
 

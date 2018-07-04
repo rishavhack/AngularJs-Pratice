@@ -1,0 +1,24 @@
+<div ng-controller="homtCtrl"><!--
+	<div ui-grid="{ data: users }" class="myGrid"></div>-->
+		
+	<input type="text" ng-model="gridName"/>
+	<select ng-model="gridGender">
+		<option value="male">male</option>
+		<option value="female">Female</option>
+	</select>
+	<input type="text"  ng-model="gridPhone"/>
+	
+	 <button type="button" class="btn btn-default btn-sm" style="color:white;background: black;" ng-click="addItemIngrid(gridName,gridGender,gridPhone)" ng-if="!gridButton">
+          <span class="glyphicon glyphicon-plus" style="font-size: 14px;">Add</span>
+        </button>
+	 <button type="button" class="btn btn-default btn-sm" style="color:yellow;background: black;" ng-click="updateItem(gridName,gridGender,gridPhone)" ng-if="gridButton">
+          <span class="glyphicon glyphicon-plus" style="font-size: 14px;">Update</span>
+        </button>
+	<!--<button type="button" ng-click="addItemIngrid(gridName,gridGender,gridPhone)" ng-if="!gridButton">Add Item</button>-->
+	<!--<button type="button" ng-click="updateItem(gridName,gridGender,gridPhone)" ng-if="gridButton">Update</button>-->
+			
+	<br>
+	<div ui-grid="gridOptions"  ui-grid-edit ui-grid-row-edit  class="grid" ng-if="gridOptions.data"></div>
+	<br>
+	<div ui-grid="gridOptions" ui-grid-pagination class="myGrid"></div>
+</div>

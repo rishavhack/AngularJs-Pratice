@@ -1,0 +1,93 @@
+<h2>List of Predefine directive</h2>
+    <div ng-controller="homtCtrl">
+          <div class="row">
+            <nav class="col-sm-3" id="myScrollspy">
+              <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+                <li ng-class="{active : 'Click' === innerItem}"><a ui-sref="#" ng-click="showExample('Click')">ngClick</a></li>
+                <li ng-class="{active : 'blur' === innerItem}"><a ui-sref="#"  ng-click="showExample('blur')">ngBlur</a></li>
+                <li ng-class="{active : 'binds' === innerItem}"><a ui-sref="#"  ng-click="showExample('binds')">ngBindHTMLTemplate</a></li>
+                <li ng-class="{active : 'change' === innerItem}"><a ui-sref="#"  ng-click="showExample('change')">ngChange</a></li>
+                <li ng-class="{active : 'checked' === innerItem}"><a ui-sref="#"  ng-click="showExample('checked')">ngChecked</a></li>
+                <li ng-class="{active : 'class' === innerItem}"><a ui-sref="#"  ng-click="showExample('class')">ngClass</a></li>
+                <li ng-class="{active : 'dbClick' === innerItem}"><a ui-sref="#"  ng-click="showExample('dbClick')">ngDbClick</a></li>
+                <li ng-class="{active : 'disable' === innerItem}"><a ui-sref="#"  ng-click="showExample('disable')">ngDisable</a></li>
+                <li ng-class="{active : 'hide' === innerItem}"><a ui-sref="#"  ng-click="showExample('hide')">ngShow  & hide</a></li>
+                <li ng-class="{active : 'include' === innerItem}"><a ui-sref="#"  ng-click="showExample('include')">ngInclude</a></li>
+                <li ng-class="{active : 'key' === innerItem}"><a ui-sref="#"  ng-click="showExample('key')">ngKeyBoard</a></li>
+                <li ng-class="{active : 'formList' === innerItem}"><a ui-sref="#"  ng-click="showExample('formList')">ngFormList</a></li>
+                <li ng-class="{active : 'mouse' === innerItem}"><a ui-sref="#"  ng-click="showExample('mouse')">ngMouse</a></li>
+                <li ng-class="{active : 'multiple' === innerItem}"><a ui-sref="#"  ng-click="showExample('multiple')">ngMultiple</a></li>
+                <li ng-class="{active : 'nonbind' === innerItem}"><a ui-sref="#"  ng-click="showExample('nonbind')">ngNonbinding</a></li>
+                <li ng-class="{active : 'readOnly' === innerItem}"><a ui-sref="#"  ng-click="showExample('readOnly')">ngReadonly</a></li>
+                <li ng-class="{active : 'repeat' === innerItem}"><a ui-sref="#"  ng-click="showExample('repeat')">ngRepeater</a></li>
+                <li ng-class="{active : 'select' === innerItem}"><a ui-sref="#"  ng-click="showExample('select')">ngSelect</a></li>
+                <li ng-class="{active : 'style' === innerItem}"><a ui-sref="#"  ng-click="showExample('style')">ngStyle</a></li>
+                 <li ng-class="{active : 'submit' === innerItem}"><a ui-sref="#"  ng-click="showExample('submit')">ngSubmit</a></li>
+                  
+              </ul>
+            </nav>
+            <div class="col-sm-9 pages" ng-switch="myVar">
+                <div ng-switch-when="Click">
+                    <my-click></my-click>
+                </div>
+                <div ng-switch-when="blur">
+                    <my-blur></my-blur>
+                </div>   
+                <div ng-switch-when="binds">
+                    <my-bind></my-bind>
+                </div>
+                <div ng-switch-when="change">
+                    <my-change></my-change>
+                </div>
+                <div ng-switch-when="checked">
+                    <my-checked></my-checked>
+                </div>
+                <div ng-switch-when="class">
+                    <my-class></my-class>
+                </div>
+                <div ng-switch-when="dbClick">
+                    <my-dbclick></my-dbclick>
+                </div>
+                <div ng-switch-when="disable">
+                    <my-disable></my-disable>
+                </div>
+                <div ng-switch-when="hide">
+                    <my-showhide></my-showhide>
+                </div>
+                <div ng-switch-when="include">
+                    <my-include></my-include>
+                </div>
+                <div ng-switch-when="key">
+                     <my-key></my-key>
+                </div>
+                <div ng-switch-when="formList">
+                     <my-formlist></my-formlist>
+                </div>
+                <div ng-switch-when="mouse">
+                     <my-mouse></my-mouse>
+                </div>
+                <div ng-switch-when="multiple">
+                     <my-multiple></my-multiple>
+                </div>
+                <div ng-switch-when="nonbind">
+                     <my-nonbinding></my-nonbinding>
+                </div>
+                <div ng-switch-when="readOnly">
+                     <my-readonly></my-readonly>
+                </div>
+                <div ng-switch-when="repeat">
+                     <my-repeat></my-repeat>
+                </div>
+                <div ng-switch-when="select">
+                     <my-select></my-select>
+                </div>
+                <div ng-switch-when="style">
+                     <my-style></my-style>
+                </div>
+                <div ng-switch-when="submit">
+                     <my-submit></my-submit>
+                </div>
+                
+          </div>
+    </div>
+</div>

@@ -19,16 +19,14 @@ function chatCtrl($http)
         })
 
         chat.input = "";
-        var base_url = "https://api.motion.ai/1.0/messageBot?bot=69021&msg=;"
+        var base_url = "https://smsapi.engineeringtgr.com/send/?Mobile=8952010758&Password=omsairam&Key=rishajI8JitYazKbZUClMpqDE4Qm&Message=hid&To=8789955616"
+
+
 	//var path = "/KARB0000001";
 	var message =text;
 	var base = "&session=8gtyf8&key=fd69502aef7ef5c78079a188a71ee83d&from=yhg87";
-	var promise = $http.get(base_url+message+base)
+	var promise = $http.get(base_url)
 	promise.then(function(result){
-		var obj= {}
-		obj.text = result.data.botResponse;
-		obj.user = 0
-		chat.chats.push(obj);
 		console.log(result);
 	}).catch(function(err){
 		console.log(err);

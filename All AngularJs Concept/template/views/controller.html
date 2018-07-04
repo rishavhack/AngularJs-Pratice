@@ -1,0 +1,14 @@
+<div ng-controller="homeCtrl">
+	<h4>Dependency injection</h4>
+		<h3>Value of 8 is passed from the controller to the view->: <b>{{ID}}</b></h3>
+	<br>
+	<label>First Num:</label>
+		<input type="number" ng-model="firstNum" class="form-control">
+	<br>
+	<label>Second Num:</label>
+		<input type="number" ng-model="secondNum" class="form-control">
+	<br>
+		<button type="button" class="btn" ng-click="addServiceNumber(firstNum,secondNum)">Add(Service)</button>
+	<br>
+	<h3>Value get by using custom Serive:<b>{{result}}</b></h3>
+</div>

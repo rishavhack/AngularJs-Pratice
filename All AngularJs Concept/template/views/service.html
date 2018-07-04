@@ -1,0 +1,32 @@
+<div ng-controller="homtCtrl">
+	<br>
+	<br>
+	<br>
+	<br>
+	<input name="states" id="states" type="text" placeholder="enter a state" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+	<br>
+	<br>
+	<br>
+	<br>
+		Enter Your IFS Code:<input type="text" ng-model="ifscCode" class="form-control" ng-blur="ifscBank(ifscCode)">
+	<br>
+	<br>	
+	<br>
+	<br>
+	<!--<ul>
+		<li ng-repeat="ifs in ifscDetails">
+			<td>BankName->{{ifs.BANK}}</td>
+			<td>BankName: {{ifs.BANK}}</td>
+		</li>
+	</ul>-->
+		<!--<form name="personForm">
+			PAN:<input type="text" name="email" ng-model="txtmail" ng-pattern="/^.{3}[P]/g" required />
+			<span style="color:Red" ng-show="personForm.email.$error.required"> Required!</span>
+			<span style="color:Red" ng-show="personForm.email.$dirty&&personForm.email.$error.pattern">Please Enter Valid Email</span>
+         </form>-->
+	<table>
+	 <tr ng-repeat="(key, value) in ifscDetails">
+    <td> <b>{{key}}</b> </td> <td> {{ value }} <br></td>
+  </tr>
+	</table>
+</div>

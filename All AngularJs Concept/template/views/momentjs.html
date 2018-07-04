@@ -1,0 +1,13 @@
+<div ng-controller="homtCtrl">
+	Current Time Stamp<b>{{cdate}}</b><br>
+	Current Date Time:<b> {{cdate | date:'dd/MM/yyyy hh:mm:ss a'}}</b><br>
+	Current Date :<b>{{cdate | date:'dd/MM/yyyy'}}</b><br>
+	Current Time :<b>{{cdate | date:'hh:mm:ss a'}}</b>
+	<br>
+	ThisYear: <input type="checkbox" ng-click="momentsYear()">
+	<div ng-show="!momentYear">Year: {{year}}</div>
+	<br>
+	<br>
+	ThisMonth: <input type="checkbox" ng-click="momentsMonth()">
+	<div ng-show="!momentMonth">Month: {{month}}</div>
+</div>

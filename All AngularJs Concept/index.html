@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="routeApp">
+    <head>
+        <title>Full Angular</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/ui-grid.css">
+        <script src="js/angular.js"></script>
+        <script src="js/angular-ui-router.js"></script>
+        <script src="js/ocLazyLoad.js"></script>
+        <script src="js/app.js"></script>
+        
+    </head>
+    <body ng-controller="homtCtrl">
+        <div class="container" style="background-color:#2196F3;color:#fff;height: 120px;
+    text-align: center;">
+          <h1>HireCraft Pvt.</h1>
+          <p><strong>Ui-Router Concept</strong></p>
+        </div>
+<br>
+        <div>
+          <div class="row">
+            <nav class="col-sm-3" id="myScrollspy">
+              <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+                <li ng-class="{active : 1 === item}"><a ui-sref="home" ng-click="setItem(1)">AngularJs Predefined Directives</a></li>
+                <li ng-class="{active : 2 === item}"><a ui-sref="proStruct" ng-click="setItem(2)">UI-Select</a></li>
+                <li ng-class="{active : 3 === item}"><a ui-sref="ui" ng-click="setItem(3)">$broadCast $emit $on</a></li>
+                <li ng-class="{active : 4 === item}"><a ui-sref="array" ng-click="setItem(4)">Understanding Between Array,JSON,Object,variables</a></li>
+                <li ng-class="{active : 5 === item}"><a ui-sref="underscore" ng-click="setItem(5)">Underscore With examples</a></li>
+                <li ng-class="{active : 6 === item}"><a ui-sref="controller" ng-click="setItem(6)">Controller with Dependicy injections</a></li>
+                <li ng-class="{active : 7 === item}"><a ui-sref="service" ng-click="setItem(7)">Service and Http Method Calls</a></li>
+                <li ng-class="{active : 8 === item}"><a ui-sref="filter" ng-click="setItem(8)">AngularJs Filters</a></li>
+                <li ng-class="{active : 9 === item}"><a ui-sref="forms" ng-click="setItem(9)">Single Saving and Update Forms</a></li>
+                <li ng-class="{active : 10 === item}"><a ui-sref="ui-grid" ng-click="setItem(10)">Ui-grid Functionality</a></li>
+                <li ng-class="{active : 11 === item}"><a ui-sref="momentjs" ng-click="setItem(11)">MomentsJs - Understanding and Examples</a></li>
+                <li ng-class="{active : 12 === item}"><a ui-sref="custom" ng-click="setItem(12)">AngularJs custom Directive</a></li>
+              </ul>
+            </nav>
+            <div class="col-sm-9 pages"> 
+				<div ui-view></div>
+            </div>
+          </div>
+       </div>
+    </body>
+</html>

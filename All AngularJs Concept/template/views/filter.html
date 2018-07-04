@@ -1,0 +1,14 @@
+<div ng-controller="homtCtrl">
+	<h4>UpperCase Filter</h4>
+	<ul>
+		<li ng-repeat="lst in artists">{{lst | uppercase}}</li>
+	</ul>
+	<h4>Filter only 'R'</h4>
+	<ul>
+		<li ng-repeat="lst in artists">{{lst | filter : 'r'}}</li>
+	</ul>
+	<h4>Custom filter</h4>
+	<ul>
+		<li ng-repeat="lst in artists">{{lst | camalCase }}</li>
+	</ul>
+</div>

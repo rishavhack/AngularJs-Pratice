@@ -1,0 +1,59 @@
+.active{
+    color:red;
+} 
+.affix {
+      top: 20px;
+      z-index: 9999 !important;
+  }
+nav ul
+{
+    height: 284px;
+    width: 100%;
+}
+nav ul
+{
+     overflow-y:auto;
+}
+nav ul li
+{
+    cursor: pointer
+}
+
+textarea {
+  
+  width: 95%;
+  height: 400px;
+}
+
+div[ng-controller] {
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid orange;
+}
+.sucess
+{
+    color:blue;
+}
+.myGrid {
+
+width: 500px;
+
+height: 200px;
+
+}
+.has-error .form-control
+{
+	border-color: #2fff00 !important;
+}
+.red { color: black;  background-color: skyblue !important; }
+.blue { color : black; background-color: pink !important; }
+/*  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 150px;
+    }
+  }*/
+/*
+ div.col-sm-9 div {
+    
+  }
+*/
