@@ -1,0 +1,31 @@
+<div ng-controller="homeCtrl as home">
+  <div class="col-md-12 text-center">
+    <hr>
+    <div class="row" style="width:800px; margin: auto">
+      <div class="col-md-8">
+        <input type="text" class="form-control" ng-model="home.text">
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-success" style="width:250px" ng-click="home.edit ? home.editTodoSave(home.text) : home.addTodo(home.text)">{{home.edit ? 'Edit Todo': 'Add Todo'}}</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="col-md-12" style="width:800px; margin: 0 0 0 300px; padding: 30px 0">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="list in home.todoList.list track by $index">
+        <div class="row">
+          <div class="col-md-8">
+            {{$index + 1}}. <a href="#!/task" ng-click="home.todoList.index = $index">{{list.name}}</a>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-primary btn-sm" ng-click="home.editTodo($index)"><span class="glyphicon glyphicon-pencil"></span></button>
+            <button type="button" class="btn btn-danger btn-sm" ng-click="home.removeTodo($index)"><span class="glyphicon glyphicon-remove"></span></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
