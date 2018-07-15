@@ -1,0 +1,18 @@
+<div class="container" ng-controller="GalleryCtrl as me">
+ <div class="text-center">
+ 	<h2>Photo Gallery</h2>
+ </div>
+ <div class="row" style="margin : 20px 0px 40px 0px">
+ 	<div class="col-md-6 col-md-offset-3">
+ 		<input type="text" placeholder="SearchPhots" class="form-control" ng-model="me.search">
+ 	</div>
+ 	<div class="col-md-3 text-right">
+ 		<a href="#!/main" class="btn btn-sm btn-primary">Add more Photo</a>
+ 	</div>
+ </div>
+	<div class="row">
+		<div class="col-md-4" ng-repeat="url in me.urls | filter:me.search">
+			<img class="img-responsive" ng-src="{{url.imageUrl}}" class="img-responsive img-thumbnail" style="width: 80%">
+		</div>
+	</div>
+</div>
