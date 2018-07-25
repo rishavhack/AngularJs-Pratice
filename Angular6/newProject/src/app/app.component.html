@@ -1,7 +1,7 @@
 <div id="container">
-  <app-sidebar></app-sidebar>
-
+	{{title}}
+  <app-child (childEvent)="title=$event"></app-child>
   <div id="content">
-    <router-outlet></router-outlet>
+    
   </div>
 </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="firebaseapp">
+<head>
+	<title>DashBoard</title>
+	<script src="angular.min.js"></script>
+	<script src="routing.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCLZVdUTB7u7Wkl9d3YEgv93lrFEm4oS6g",
+	    authDomain: "chatapp-5dd9b.firebaseapp.com",
+	    databaseURL: "https://chatapp-5dd9b.firebaseio.com",
+	    projectId: "chatapp-5dd9b",
+	    storageBucket: "chatapp-5dd9b.appspot.com",
+	    messagingSenderId: "955513121255"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="angularfire.min.js"></script>
+	
+	</head>
+<body>
+    
+<div ng-controller="dataCtrl">
+
+ <input type="text" ng-model="student">
+    <button ng-click="add()">select</button>
+</div>
+
+</body>
+</html>

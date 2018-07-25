@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="firebaseapp">
+<head>
+	<title>Project</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="routing.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCLZVdUTB7u7Wkl9d3YEgv93lrFEm4oS6g",
+	    authDomain: "chatapp-5dd9b.firebaseapp.com",
+	    databaseURL: "https://chatapp-5dd9b.firebaseio.com",
+	    projectId: "chatapp-5dd9b",
+	    storageBucket: "chatapp-5dd9b.appspot.com",
+	    messagingSenderId: "955513121255"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="angularfire.min.js"></script>
+	
+	</head>
+<body>
+    
+<div ng-controller="dataCtrl">
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="x in students">{{x.$value}}</li>
+</ul>
+
+</div>
+
+</body>
+</html>
