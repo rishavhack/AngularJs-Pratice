@@ -20,8 +20,11 @@ public signUp = new Object();
 	}
 	signInButton()
 	{
-		console.log(this.signIn);
-		this.router.navigate(['/home'])
+		let local = JSON.parse(localStorage.getItem('signUpDetails'));
+		if(this.signIn.email == local.email && this.signIn.pwd == local.pwd)
+		{
+			this.router.navigate(['/home'])
+		}
 	}
 	signUpButton()
 	{
