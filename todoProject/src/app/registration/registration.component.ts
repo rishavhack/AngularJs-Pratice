@@ -8,7 +8,7 @@ import { Router } from  '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 public formValue = true;
-public signIn = new Object();
+public signIn = {email:'',pwd:''};
 public signUp = new Object();
   constructor(private router : Router) { }
 
@@ -30,12 +30,12 @@ public signUp = new Object();
 		let local = JSON.parse(localStorage.getItem('signUpDetails'));
 		if(this.signIn.email == local.email && this.signIn.pwd == local.pwd)
 		{
-			this.router.navigate(['/home'])
+			this.router.navigate(['/home'];
 		}
 	}
 	signUpButton()
 	{
-		console.log(this.signUp);
 		localStorage.setItem("signUpDetails",JSON.stringify(this.signUp))
+		this.signUp = {};
 	}
 }
