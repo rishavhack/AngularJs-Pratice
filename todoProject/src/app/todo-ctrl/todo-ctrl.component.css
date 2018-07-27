@@ -1,0 +1,8 @@
+
+.buttonIcon
+{
+	float: right;
+	cursor: pointer;
+	background-color: blue;
+    color: black;
+}

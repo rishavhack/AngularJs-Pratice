@@ -1,0 +1,50 @@
+<div class="contain-fluid">
+	<h1>Registertation</h1>
+	<form #userForm="ngForm">
+		{{userForm.value | json}}
+	<!-- 	{{ userModel | json}} -->
+		<div class="form-group">
+			<label>Name</label>
+			<input type="text" required #user="ngModel"  class="form-control" name="user" [(ngModel)]="detail.user">
+			<!-- <span *ngIf="!shr.untouched">Touched</span>
+			{{shr.invalid}} -->
+		</div>
+		 <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="detail.email" #email="ngModel" [ngClass]="{ 'is-invalid': email.invalid }" required email />
+                        <div *ngIf="email.invalid" class="invalid-feedback">
+                            <div *ngIf="email.errors.required">Email is required</div>
+                            <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+
+		<div class="form-group">
+			<label>Phone</label>
+			<input type="password" class="form-control" minlength="6" required #phone="ngModel" maxlength="10" name="phone" [(ngModel)]="detail.phone">
+			<div *ngIf="phone.errors.minlength">Password must be at least 6 characters</div>
+
+		</div>
+		<div class="form-group">
+			<select class="custom-select" name="select" [(ngModel)]="detail.select">
+				<option selected>I am Interested</option>
+				<option *ngFor="let topic of topics">{{topic}}</option>
+			</select>
+		</div>
+		<div class="mb-3">
+			<label>Time preference</label>
+			<div class="form-check">
+				<input type="radio" class="form-check-input" [(ngModel)]="detail.time" value="Morning" name="Time">
+				<label class="form-check-label">Morning 9am</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" [(ngModel)]="detail.time" value="Evening" name="Time">
+				<label class="form-check-label">Evening</label>
+			</div>
+		</div>
+		<div class="form-check mb-3">
+				<input class="form-check-input" type="checkbox" name="send" [(ngModel)]="detail.send">
+				<label class="form-check-label">Send me</label>
+			</div>
+			<button class="btn btn-primary" type="Submit" (click)="todo()">Submit Form</button>
+	</form>
+</div>
