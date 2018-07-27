@@ -30,7 +30,7 @@ public signUp = new Object();
 		let local = JSON.parse(localStorage.getItem('signUpDetails'));
 		if(this.signIn.email == local.email && this.signIn.pwd == local.pwd)
 		{
-			this.router.navigate(['/home'];
+			this.router.navigate(['/home']);
 		}
 	}
 	signUpButton()
