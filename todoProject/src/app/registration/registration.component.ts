@@ -14,9 +14,16 @@ public signUp = new Object();
 
   ngOnInit() {
   }
-	toggle()
+	toggle(x)
 	{
-		this.formValue = this.formValue ? false : true
+		if(x)
+		{
+			this.formValue = false
+		}
+		else
+		{
+		 	this.formValue = true
+		 }
 	}
 	signInButton()
 	{
