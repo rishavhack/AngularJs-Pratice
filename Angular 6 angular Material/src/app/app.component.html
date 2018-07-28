@@ -1,0 +1,28 @@
+<form class="example-form" #userForm="ngForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" value="Sushi" [(ngModel)]="signIn.sas" name="sas">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment" [(ngModel)]="signIn.ghgf" name="ghgf"></textarea>
+  </mat-form-field>
+</form>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="signIn.asas" name="asas">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<mat-checkbox [(ngModel)]="signIn.dasdasd" >Check me!</mat-checkbox>
+<mat-form-field>
+  <mat-select placeholder="Favorite food" [(ngModel)]="signIn.dssd" name="dssd">
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-tab-group>
+  <mat-tab label="First"> <app-home></app-home></mat-tab>
+  <mat-tab label="Second"> <app-rishav></app-rishav> </mat-tab>
+  <mat-tab label="Third"> <app-todo></app-todo></mat-tab>
+</mat-tab-group>
+<button mat-raised-button color="primary" (click)="add()">Click me!</button>
