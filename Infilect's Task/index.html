@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="infilectApp">
+<head>
+<title>Infilect Tasks</title>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+<script src="node_modules/angular-material/angular-material.min.js"></script> 
+<script src="script/app.js"></script>
+<script src="script/service.js"></script>
+<script src="script/controller/search.js"></script>
+<script src="script/controller/gallery.js"></script>
+<script src="script/controller/group.js"></script>
+<script src="script/controller/overview.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">InFilect</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ng-class="{'active':tab == 1}" ><a href="#!/" ng-click="tab = 1">Home</a></li>
+      <li ng-class="{'active':tab == 2}" ><a href="#!/gallery" ng-click="tab = 2">Gallery</a></li>
+      <li ng-class="{'active':tab == 3}"><a href="#!/group" ng-click="tab = 3">Groups</a></li>
+    </ul>
+  </div>
+</nav>
+<ng-view></ng-view>
+</body>
+</html>
