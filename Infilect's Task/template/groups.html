@@ -1,0 +1,30 @@
+<div ng-controller="groupCtrl">
+<div class="totalDetails" ng-if="groups.group.length">
+    <h3>{{groups.group.length}} of {{groups.total}}</h3>
+</div>
+<div class="row">
+	<div class="col-sm-4" ng-repeat="abc in groups.group">
+		 <div  layout="column">
+      <md-card md-theme="'default'" md-theme-watch class="cards">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{abc.name}}</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media">
+			<img src="http://farm{{abc.iconfarm}}.staticflickr.com/{{abc.iconserver}}/buddyicons/{{abc.nsid}}.jpg" class="img-rounded" alt="{{abc.name}}"/>
+			</div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center" style="color: #898989;">
+          <md-button><span class="glyphicon glyphicon-user"></span>
+            <span>{{abc.members | myFormat}}</span></md-button>
+          <md-button><span class="glyphicon glyphicon-heart-empty"></span><span>{{abc.pool_count | myFormat}}</span></md-button>
+          <md-button><span class="glyphicon glyphicon-comment"></span><span>{{abc.topic_count }}</span></md-button>
+        </md-card-actions>
+      </md-card>
+	  </div>
+	</div>
+</div>
+</div>

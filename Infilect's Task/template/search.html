@@ -1,0 +1,14 @@
+<div ng-controller="searchCtrl">
+	<div class="search-form-box col-md-4 dropdown">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+			<input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" ng-model="modelName.value"/>
+			<ul class="dropdown-menu">
+				  <li><a href="#">HTML</a></li>
+				  <li><a href="#">CSS</a></li>
+				  <li><a href="#">JavaScript</a></li>
+			</ul>
+		</div>
+		<button ng-click="add()">Click</button>
+	</div>
+</div>
