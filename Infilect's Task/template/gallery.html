@@ -1,0 +1,30 @@
+<div ng-controller="galleryCtrl">
+  <div class="col-md-4" ng-repeat="phot in photos.photo">
+      <div class="thumbnail conta">
+          <img src="https://farm{{phot.farm}}.staticflickr.com/{{phot.server}}/{{phot.id}}_{{phot.secret}}.jpg" alt="Lights" style="width:100%;height:300px" class="image">
+          <div class="caption">
+          	<div class="row">
+          		<div class="col-sm-6 ellips">
+            		<p data-toggle="tooltip" data-placement="bottom" title="{{phot.title}}"><b>{{phot.title}}</b></p>
+            		<p data-toggle="tooltip" data-placement="bottom" title="by {{phot.ownername}} on {{phot.dateadded | dateformat}}">by {{phot.ownername}} on {{phot.dateadded | dateformat}}</p>
+	       		</div>
+	       		<div class="col-sm-6">
+		   			<span class="glyphicon glyphicon-heart-empty"></span>
+		   			<span class="glyphicon glyphicon-comment"></span>
+		   		</div>
+          	</div>
+          </div>
+      </div>
+    </div> 
+    <!-- <div class="col-md-4" ng-repeat="phot in photos.photo">
+   <img src="https://farm{{phot.farm}}.staticflickr.com/{{phot.server}}/{{phot.id}}_{{phot.secret}}.jpg"" alt="Avatar" class="image" >
+  <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+</div> -->
+<!-- <div class="row1"> 
+  <div class="column1" ng-repeat="phot in photos.photo">
+  	<img src="https://farm{{phot.farm}}.staticflickr.com/{{phot.server}}/{{phot.id}}_{{phot.secret}}.jpg"  style="width:100%" style="he">
+  </div>
+  </div> -->
+</div>

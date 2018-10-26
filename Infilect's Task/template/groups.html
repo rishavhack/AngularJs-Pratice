@@ -4,12 +4,12 @@
 </div>
 <div class="row">
 	<div class="col-sm-4" ng-repeat="abc in groups.group">
+    <a href="#!/gallery/{{abc.nsid}}">
 		 <div  layout="column">
       <md-card md-theme="'default'" md-theme-watch class="cards">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">{{abc.name}}</span>
-            <span class="md-subhead">Small</span>
           </md-card-title-text>
           <md-card-title-media>
             <div class="md-media-sm card-media">
@@ -25,6 +25,7 @@
         </md-card-actions>
       </md-card>
 	  </div>
+    </a>
 	</div>
 </div>
 </div>
