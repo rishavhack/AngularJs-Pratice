@@ -22,6 +22,7 @@
 <script src="script/controller/gallery.js"></script>
 <script src="script/controller/group.js"></script>
 <script src="script/controller/overview.js"></script>
+<script src="script/controller/photo.js"></script>
 
 </head>
 <body>
@@ -31,9 +32,7 @@
       <a class="navbar-brand" href="#">InFilect</a>
     </div>
     <ul class="nav navbar-nav">
-      <li ng-class="{'active':tab == 1}" ><a href="#!/" ng-click="tab = 1">Home</a></li>
-      <li ng-class="{'active':tab == 2}" ><a href="#!/gallery" ng-click="tab = 2">Gallery</a></li>
-      <li ng-class="{'active':tab == 3}"><a href="#!/group" ng-click="tab = 3">Groups</a></li>
+      <li ng-class="active" ><a href="#!/">Home</a></li>
     </ul>
   </div>
 </nav>

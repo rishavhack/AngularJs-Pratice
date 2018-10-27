@@ -1,14 +1,15 @@
-<div ng-controller="searchCtrl">
-	<div class="search-form-box col-md-4 dropdown">
+<div ng-controller="searchCtrl" class="box">
+	<div class="search-form-box col-md-12 dropdown">
+		<div>
+			<img src="https://infilect.com/wp-content/uploads/2018/03/logo-design-1x.png"/>
+		</div>
 		<div class="input-group">
 			<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
 			<input type="text" class="form-control dropdown-toggle" data-toggle="dropdown" ng-model="modelName.value"/>
-			<ul class="dropdown-menu">
-				  <li><a href="#">HTML</a></li>
-				  <li><a href="#">CSS</a></li>
-				  <li><a href="#">JavaScript</a></li>
+			<ul class="dropdown-menu" style="width: 100%" ng-if="modelName.value">
+				  <li><a href="#!/photo/{{modelName.value}}"><span class="glyphicon glyphicon-picture"></span><span class="searchText"> Search Photo</span></a></li>
+				  <li><a href="#!/group/{{modelName.value}}"><span class="glyphicon glyphicon-list-alt"></span><span class="searchText"> Search Group</span></a></li>
 			</ul>
 		</div>
-		<button ng-click="add()">Click</button>
 	</div>
 </div>

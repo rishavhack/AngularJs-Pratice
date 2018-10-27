@@ -1,5 +1,15 @@
-.search-form-box{
-	margin: 0 auto;
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar-inverse {
+    background-color: royalblue !important;
+}
+.searchText{
+  color: skyblue;
 }
 .cards{
 	height:200px;
@@ -16,6 +26,7 @@
 }
 body{
 	background-color: #ada1ac;
+  height: 100%;
 }
 .totalDetails{
 	text-align: center;
