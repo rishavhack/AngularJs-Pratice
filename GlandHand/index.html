@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>GlandHand</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="ctrl">
+	<div class="container">
+		<div class="col-md-9">
+			<div class="center">
+				<button type="button" class="btn btn-primary btn-block" ng-click="addBall()">Drop</button>
+				<ul class="list-group">
+					<li ng-repeat="x in arr | orderBy:'-x.id' track by $index" class="list-group-item" ng-style="{'background-color':x.color}" style="color:white">{{$index + 1}}. {{x.color}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3" ng-if="arr.length">
+			<table>
+				  <tr>
+				    <th>Green</th>
+				    <th>Blue</th>
+				    <th>Purple</th>
+				    <th>Pink</th>
+				  </tr>
+				  <tr>
+				    <td>{{obj.Green}}</td>
+				    <td>{{obj.Blue}}</td>
+				    <td>{{obj.Purple}}</td>
+				    <td>{{obj.Pink}}</td>
+				  </tr>
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>
