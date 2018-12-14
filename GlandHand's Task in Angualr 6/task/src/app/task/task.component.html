@@ -1,0 +1,26 @@
+<div class="container row">
+		<div class="col-md-9">
+			<div class="center">
+				<button type="button" class="btn btn-primary btn-block" (click)="addBall()">Drop</button>
+				<ul class="list-group">
+					<li *ngFor="let x of arr;let i = index" class="list-group-item" [ngStyle]="{'background-color':x.color}" style="color:white">{{i + 1}}. {{x.color}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3" *ngIf="arr.length">
+			<table>
+				  <tr>
+				    <th>Green</th>
+				    <th>Blue</th>
+				    <th>Purple</th>
+				    <th>Pink</th>
+				  </tr>
+				  <tr>
+				    <td>{{obj.Green}}</td>
+				    <td>{{obj.Blue}}</td>
+				    <td>{{obj.Purple}}</td>
+				    <td>{{obj.Pink}}</td>
+				  </tr>
+			</table>
+		</div>
+	</div>
